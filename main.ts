@@ -35,7 +35,7 @@ let cmd=''
 
   //% blockId=asr_compare block="ASR Compare %compare"
   //% group="Basic" weight=90
-  export function asc_compare(cmd, compare: lightCMD): boolean{
+  export function asc_compare(cmd: asr_cmd(), compare: lightCMD): boolean{
     return cmd == compare
   }
 }

@@ -27,16 +27,16 @@ let cmd=''
 
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=90
-  export function asr_cmd(): string {
+  function asr_cmd(): string {
     cmd=serial.readString()
     cmd=cmd.substr(3,3)
     return cmd
   }
 
-  //% blockId=asr_compare block="ASR Compare %cmd %compare"
+  //% blockId=asr_compare block="ASR Compare %compare"
   //% group="Basic" weight=90
-  export function asc_compare(cmd: string, compare: lightCMD): boolean{
-    //let cmd = asr_cmd()
+  export function asc_compare(compare: lightCMD): boolean{
+    let cmd = asr_cmd()
     //basic.showString(cmd)
     //basic.showString(""+ (cmd == compare))
     if (cmd == compare){

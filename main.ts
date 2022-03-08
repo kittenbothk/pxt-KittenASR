@@ -116,6 +116,48 @@ let cmd=''
   thirdfloor='331'
   }
 
+  export enum askCMD {
+  //%block="Check Temperature"
+  temp='400',
+  //%block="Check Humidity"
+  humid='401',
+  //%block="Check Weather"
+  weather='402',
+  //%block='Check Time'
+  time='403',
+  //%block="Measure Distance"
+  distance='405',
+  //%block="Measure Temperature"
+  mtemp='406',
+  //%block='Measure Weight'
+  weight='407',
+  //block='Measure Height'
+  height='408'
+  }
+
+  export enum custCMD {
+  //block="Custom Command 1"
+  c1='901',
+  //block="Custom Command 2"
+  c1='902',
+  //block="Custom Command 3"
+  c1='903',
+  //block="Custom Command 4"
+  c1='904',
+  //block="Custom Command 5"
+  c1='905',
+  //block="Custom Command 6"
+  c1='906',
+  //block="Custom Command 7"
+  c1='907',
+  //block="Custom Command 8"
+  c1='908',
+  //block="Custom Command 1"
+  c1='909',
+  //block="Custom Command 10"
+  c1='910'
+  }
+
 /**
    * init serial port
    * @param tx Tx pin; eg: SerialPin.P1
@@ -176,6 +218,31 @@ let cmd=''
     }
   }
 
+  //% blockId=asr_ask block="Got Ask Command? %cmd %compare"
+  //% group="Basic" weight=80
+  export function asr_ask(cmd: string, compare: askCMD): boolean{
+    //let cmd = get_cmd()
+    //basic.showString(cmd)
+    //return cmd == compare
+    if (cmd == compare){
+    return true
+    } else{
+    return false
+    }
+  }
+
+  //% blockId=asr_cust block="Got Custom Command? %cmd %compare"
+  //% group="Basic" weight=75
+  export function asr_cust(cmd: string, compare: custCMD): boolean{
+    //let cmd = get_cmd()
+    //basic.showString(cmd)
+    //return cmd == compare
+    if (cmd == compare){
+    return true
+    } else{
+    return false
+    }
+  }
 
   serial.onDataReceived('',function(){
   music.playTone(262, music.beat(BeatFraction.Eighth))

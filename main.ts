@@ -30,13 +30,15 @@ let cmd=''
   export function asr_cmd(): string {
     cmd=serial.readString()
     cmd=cmd.substr(3,3)
-    basic.showString(cmd)
     return cmd
   }
 
   //% blockId=asr_compare block="ASR Compare %compare"
   //% group="Basic" weight=90
   export function asc_compare(compare: lightCMD): boolean{
-    return asr_cmd() == compare
+    let cmd = asr_cmd()
+    basic.showString(cmd)
+    basic.showSting(cmd == compare)
+    return cmd == compare
   }
 }

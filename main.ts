@@ -5,8 +5,12 @@ let cmd=''
   export enum lightCMD {
   //% block="Light On"
   lighton='200',
+  //% block="Lamp On"
+  lampon='200',
   //% block="Light Off"
-  lightoff='201'
+  lightoff='201',
+  //% block="Lamp Off"
+  lampoff='201',
   }
 /**
    * init serial port
@@ -31,7 +35,7 @@ let cmd=''
 
   //% blockId=asr_compare block="ASR Compare %cmd %compare"
   //% group="Basic" weight=90
-  export function asc_compare(cmd: string, compare: lightCMD): boolean{
+  export function asc_compare(cmd, compare: lightCMD): boolean{
     return cmd == compare
   }
 }

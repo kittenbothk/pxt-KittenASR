@@ -30,6 +30,7 @@ let cmd=''
   export function asr_cmd(): string {
     cmd=serial.readString()
     cmd=cmd.substr(3,3)
+    basic.showString(cmd)
     return cmd
   }
 

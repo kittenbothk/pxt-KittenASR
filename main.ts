@@ -69,7 +69,7 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_light block="ASR Light Command %compare"
+  //% blockId=asr_light block="ASR Light Command %cmd %compare"
   //% group="Basic" weight=90
   export function asr_light(cmd: string, compare: lightCMD): boolean{
     //let cmd = get_cmd()

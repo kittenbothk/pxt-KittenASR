@@ -136,25 +136,25 @@ let cmd=''
   }
 
   export enum custCMD {
-  //block="Custom Command 1"
+  //%block="Custom Command 1"
   c1='901',
-  //block="Custom Command 2"
+  //%block="Custom Command 2"
   c2='902',
-  //block="Custom Command 3"
+  //%block="Custom Command 3"
   c3='903',
-  //block="Custom Command 4"
+  //%block="Custom Command 4"
   c4='904',
-  //block="Custom Command 5"
+  //%block="Custom Command 5"
   c5='905',
-  //block="Custom Command 6"
+  //%block="Custom Command 6"
   c6='906',
-  //block="Custom Command 7"
+  //%block="Custom Command 7"
   c7='907',
-  //block="Custom Command 8"
+  //%block="Custom Command 8"
   c8='908',
-  //block="Custom Command 1"
+  //%block="Custom Command 9"
   c9='909',
-  //block="Custom Command 10"
+  //%block="Custom Command 10"
   c10='910'
   }
 

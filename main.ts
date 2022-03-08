@@ -14,6 +14,8 @@ let cmd=''
     basic.pause(300)
   }
 
+  //% blockId=asr_cmd block="ASR Command"
+  //% group="Basic" weight=90
   export function asr_cmd(): string {
     cmd=serial.readString()
     return cmd

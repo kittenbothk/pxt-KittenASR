@@ -47,7 +47,7 @@ let cmd=''
     }
   }
 
-  serial.onDataReceived('\n',function(){
+  serial.onDataReceived('',function(){
   music.playTone(262, music.beat(BeatFraction.Eighth))
   })
 }

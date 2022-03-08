@@ -48,6 +48,8 @@ let cmd=''
   //%block="All Off"
   alloff='219'
   }
+
+
 /**
    * init serial port
    * @param tx Tx pin; eg: SerialPin.P1
@@ -62,7 +64,7 @@ let cmd=''
   }
 
   //% blockId=asr_cmd block="ASR Command"
-  //% group="Basic" weight=90
+  //% group="Basic" weight=95
   export function asr_cmd(): string {
     cmd=serial.readString()
     cmd=cmd.substr(3,3)
@@ -76,6 +78,19 @@ let cmd=''
     //basic.showString(cmd)
     //return cmd == compare
     if (cmd == compare){
+    return true
+    } else{
+    return false
+    }
+  }
+
+  //% blockId=asr_awake block="ASR Awake Command %cmd"
+  //% group="Basic" weight=85
+  export function asr_awake(cmd: string): boolean{
+    //let cmd = get_cmd()
+    //basic.showString(cmd)
+    //return cmd == compare
+    if (cmd == '100'){
     return true
     } else{
     return false

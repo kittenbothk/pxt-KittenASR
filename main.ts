@@ -38,7 +38,7 @@ let cmd=''
   export function asc_compare(compare: lightCMD): boolean{
     let cmd = asr_cmd()
     basic.showString(cmd)
-    basic.showString(string(cmd == compare))
+    basic.showString(""+ (cmd == compare))
     return cmd == compare
   }
 }

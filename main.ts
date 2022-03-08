@@ -39,6 +39,10 @@ let cmd=''
     let cmd = asr_cmd()
     //basic.showString(cmd)
     //basic.showString(""+ (cmd == compare))
-    return cmd == compare
+    if (cmd == compare){
+    return true
+    } else{
+    return false
+    }
   }
 }

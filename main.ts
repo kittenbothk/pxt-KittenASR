@@ -29,7 +29,7 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_compare block="ASR Compare
+  //% blockId=asr_compare block="ASR Compare %cmd %compare"
   //% group="Basic" weight=90
   export function asc_compare(cmd: string, compare: lightCMD): boolean{
     return cmd == compare

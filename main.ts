@@ -49,6 +49,72 @@ let cmd=''
   alloff='219'
   }
 
+  export enum actionCMD {
+  //%block="Open Door"
+  dooropen='300',
+  //%block="Close Door"
+  doorclose='301',
+  //%block="Open Window"
+  windowopen='302',
+  //%block="Close Window"
+  windowclose='303',
+  //%block="Open Curtains"
+  curtainopen='304',
+  //%block="Close Curtains"
+  curtainclose='305',
+  //%block="Hanger Out"
+  hangerout='306',
+  //%block="Hanger In"
+  hangerin='307',
+  //%block="Fan On"
+  fanon='308',
+  //%block='Fan Off'
+  fanoff='309',
+  //%block='Speed Up'
+  speedup='310',
+  //%block='Slow Down'
+  slowdown='311',
+  //%block='Air Conditioner On'
+  airconon='312',
+  //%block='Air Conditioner Off'
+  airconoff='313',
+  //%block='Music On'
+  musicon='314',
+  //%block='Music Off'
+  musicoff='315',
+  //%block='Pause'
+  pause='316',
+  //%block="Previous Song"
+  previous='317',
+  //%block='Next Song'
+  next='318',
+  //%block="Volume Up"
+  volumeup='319',
+  //%block="Volume Down"
+  volumedown='320',
+  //%block="Robot On"
+  roboton='321',
+  //%block="Robot Off"
+  robotoff='322',
+  //%block='Robot Stop'
+  robotstop='323',
+  //%block='Move Forward'
+  moveforward='324',
+  //%block="Move Backward"
+  movebackward='325',
+  //%block="Turn Left"
+  turnleft='326',
+  //%block="Turn Right"
+  turnright='327',
+  //%block='Lift On'
+  lifton='328',
+  //%block="First Floor"
+  firstfloor='329',
+  //%block='Second Floor'
+  secondfloor='330',
+  //%block='Third Floor'
+  thirdfloor='331'
+  }
 
 /**
    * init serial port
@@ -71,7 +137,20 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_light block="ASR Light Command %cmd %compare"
+  //% blockId=asr_awake block="Got Awake Command? %cmd"
+  //% group="Basic" weight=92
+  export function asr_awake(cmd: string): boolean{
+    //let cmd = get_cmd()
+    //basic.showString(cmd)
+    //return cmd == compare
+    if (cmd == '100'){
+    return true
+    } else{
+    return false
+    }
+  }
+
+  //% blockId=asr_light block="Got Light Command? %cmd %compare"
   //% group="Basic" weight=90
   export function asr_light(cmd: string, compare: lightCMD): boolean{
     //let cmd = get_cmd()
@@ -84,18 +163,19 @@ let cmd=''
     }
   }
 
-  //% blockId=asr_awake block="ASR Awake Command %cmd"
+  //% blockId=asr_action block="Got Action Command? %cmd %compare"
   //% group="Basic" weight=85
-  export function asr_awake(cmd: string): boolean{
+  export function asr_action(cmd: string, compare: actionCMD): boolean{
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    if (cmd == '100'){
+    if (cmd == compare){
     return true
     } else{
     return false
     }
   }
+
 
   serial.onDataReceived('',function(){
   music.playTone(262, music.beat(BeatFraction.Eighth))

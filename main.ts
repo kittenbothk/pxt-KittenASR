@@ -1,17 +1,12 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
 namespace asr {
-
- serial.onDataReceived('\n', function () {
-     let a = serial.readUntil('\n')
-     basic.showString(a)
-   })
-
+let cmd=''
 /**
    * init serial port
    * @param tx Tx pin; eg: SerialPin.P1
    * @param rx Rx pin; eg: SerialPin.P2
    */
-  //% blockId=koi_init block="ASR init|Tx pin %tx|Rx pin %rx"
+  //% blockId=asr_init block="ASR init|Tx pin %tx|Rx pin %rx"
   //% group="Basic" weight=100
   export function asr_init(tx: SerialPin, rx: SerialPin): void {
     serial.redirect(tx, rx, BaudRate.BaudRate115200)
@@ -19,4 +14,8 @@ namespace asr {
     basic.pause(300)
   }
 
+  export function asr_cmd(): string {
+    cmd=serial.readString()
+    return cmd
+  }
 }

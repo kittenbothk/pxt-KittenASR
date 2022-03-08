@@ -1,6 +1,13 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
 namespace asr {
 let cmd=''
+
+  export enum lightCMD {
+  //% block="Light On"
+  lighton=200,
+  //% block="Light Off"
+  lightoff=201
+  }
 /**
    * init serial port
    * @param tx Tx pin; eg: SerialPin.P1
@@ -20,5 +27,11 @@ let cmd=''
     cmd=serial.readString()
     cmd=cmd.substr(3,3)
     return cmd
+  }
+
+  //% blockId=asr_compare block="ASR Compare
+  //% group="Basic" weight=90
+  export function asc_compare(cmd: string, compare: lightCMD): boolean{
+    return cmd == compare
   }
 }

@@ -64,16 +64,15 @@ let cmd=''
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=90
   export function asr_cmd(): string {
-    //cmd=serial.readString()
-    //cmd=cmd.substr(3,3)
-    //return cmd
-    return 1
+    cmd=serial.readString()
+    cmd=cmd.substr(3,3)
+    return cmd
   }
 
   //% blockId=asr_light block="ASR Light Command %compare"
   //% group="Basic" weight=90
   export function asr_light(cmd: string, compare: lightCMD): boolean{
-    let cmd = get_cmd()
+    //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
     if (cmd == compare){

@@ -33,10 +33,10 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_compare block="ASR Compare %compare"
+  //% blockId=asr_compare block="ASR Compare %cmd %compare"
   //% group="Basic" weight=90
-  export function asc_compare(compare: lightCMD): boolean{
-    let cmd = asr_cmd()
+  export function asc_compare(cmd: string, compare: lightCMD): boolean{
+    //let cmd = asr_cmd()
     //basic.showString(cmd)
     //basic.showString(""+ (cmd == compare))
     if (cmd == compare){

@@ -4,9 +4,9 @@ let cmd=''
 
   export enum lightCMD {
   //% block="Light On"
-  lighton=200,
+  lighton='200',
   //% block="Light Off"
-  lightoff=201
+  lightoff='201'
   }
 /**
    * init serial port

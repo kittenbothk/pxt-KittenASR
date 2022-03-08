@@ -45,6 +45,9 @@ let cmd=''
     } else{
     return false
     }
-
   }
+
+  serial.onDataReceived(function(){
+  music.playTone(262, music.beat(BeatFraction.Eighth))
+  })
 }

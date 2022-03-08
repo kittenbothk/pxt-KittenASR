@@ -37,7 +37,7 @@ let cmd=''
   //% group="Basic" weight=90
   export function asc_compare(compare: lightCMD): boolean{
     let cmd = asr_cmd()
-    //basic.showString(cmd)
+    basic.showString(cmd)
     //basic.showString(""+ (cmd == compare))
     if (cmd == compare){
     return true

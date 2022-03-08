@@ -11,6 +11,42 @@ let cmd=''
   lightoff='201',
   //% block="Lamp Off"
   lampoff='201',
+  //%block="Brighter"
+  bright='202',
+  //%block="Dimmer"
+  dim='203',
+  //%block="Red Light On"
+  red='204',
+  //%block="Green Light On"
+  green='205',
+  //%block="Yellow Light On"
+  yellow='206',
+  //%block="Blue Light On"
+  blue='207',
+  //%block="Sitting Room Light On"
+  livingon='208',
+  //%block="Sitting Room Light Off"
+  livingoff='209',
+  //%block="Kitchen Light On"
+  kitchenon='210',
+  //%block="Kitchen Light Off"
+  kitchenoff='211',
+  //%block="Bedroom Light On"
+  bedon='212',
+  //%block="Bedroom Light Off"
+  bedoff='213',
+  //%block="Balcony Light On"
+  balconyon='214',
+  //%block="Balcony Light Off"
+  balconyoff='215',
+  //%block='Bathroom Light On'
+  bathroomon='216',
+  //%block="Bathroom Light Off"
+  bathroomoff='217',
+  //%block="All On"
+  allon='218',
+  //%block="All Off"
+  alloff='219'
   }
 /**
    * init serial port
@@ -33,13 +69,12 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_compare block="ASR Light Command %cmd %compare"
+  //% blockId=asr_light block="ASR Light Command %cmd %compare"
   //% group="Basic" weight=90
-  export function asc_compare(cmd: string, compare: lightCMD): boolean{
+  export function asr_light(cmd: string, compare: lightCMD): boolean{
     //let cmd = asr_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-
     if (cmd == compare){
     return true
     } else{

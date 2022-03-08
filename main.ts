@@ -1,10 +1,9 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
-//% groups='["Basic", "Graphic", Classifier", "Tag/Code", "Audio", "Face", "Wifi", "CloudAI"]'
 namespace asr {
 
  serial.onDataReceived('\n', function () {
      let a = serial.readUntil('\n')
-     display.scroll(a)
+     basic.showString(a)
    })
 
 /**

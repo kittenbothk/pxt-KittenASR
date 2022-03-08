@@ -1,12 +1,11 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
 //% groups='["Basic", "Graphic", Classifier", "Tag/Code", "Audio", "Face", "Wifi", "CloudAI"]'
-namespace koi {
+namespace asr {
 
-serial.onDataReceived('\n', function () {
-    let a = serial.readUntil('\n')
-    display.scroll(a)
-  })
-}
+ serial.onDataReceived('\n', function () {
+     let a = serial.readUntil('\n')
+     display.scroll(a)
+   })
 
 /**
    * init serial port
@@ -18,11 +17,7 @@ serial.onDataReceived('\n', function () {
   export function asr_init(tx: SerialPin, rx: SerialPin): void {
     serial.redirect(tx, rx, BaudRate.BaudRate115200)
     basic.pause(100)
-    //serial.setTxBufferSize(64)
-    //serial.setRxBufferSize(64)
-    //serial.readString()
-    //serial.writeString('\n\n')
-    // take control of the ext serial port from KOI
-    //asyncWrite(`K0`, 0)
     basic.pause(300)
   }
+
+}

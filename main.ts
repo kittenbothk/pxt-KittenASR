@@ -172,14 +172,14 @@ let cmd=''
 
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=95
-  export function asr_cmd(): string {
+  export function asr_cmd(): void {
     let cmd=serial.readString()
     cmd=cmd.substr(3,3)
     //if (now.length>1){
     //cmd=now
     //return now
     //} else {
-    return cmd
+    //return cmd
     //}
 
   }
@@ -187,10 +187,10 @@ let cmd=''
   //% blockId=asr_awake block="Got Awake Command? %cmd"
   //% group="Basic" weight=92
   export function asr_awake(cmd: string): boolean{
-    let temp = get_cmd()
+    //let temp = get_cmd()
     //basic.showString(cmd)
 
-    if (temp == '100'){
+    if (cmd == '100'){
     return true
     } else{
     return false
@@ -203,8 +203,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    let temp = get_cmd()
-    if (temp == compare){
+    //let temp = get_cmd()
+    if (cmd == compare){
     return true
     } else{
     return false
@@ -217,8 +217,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    let temp = get_cmd()
-    if (temp == compare){
+    //let temp = get_cmd()
+    if (cmd == compare){
     return true
     } else{
     return false
@@ -231,8 +231,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    let temp = get_cmd()
-    if (temp == compare){
+    //let temp = get_cmd()
+    if (cmd == compare){
     return true
     } else{
     return false
@@ -245,8 +245,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    let temp = get_cmd()
-    if (temp == compare){
+    //let temp = get_cmd()
+    if (cmd == compare){
     return true
     } else{
     return false

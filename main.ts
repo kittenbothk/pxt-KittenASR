@@ -1,6 +1,6 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
 namespace asr {
-let cmd=''
+var cmd=''
 
   export enum lightCMD {
   //% block="Light On"
@@ -173,7 +173,7 @@ let cmd=''
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=95
   export function asr_cmd(){
-    let cmd=serial.readString()
+    cmd=serial.readString()
     cmd=cmd.substr(3,3)
     //if (now.length>1){
     //cmd=now

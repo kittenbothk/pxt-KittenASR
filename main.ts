@@ -210,7 +210,7 @@ let cmd=''
     }
   }
 
-  //% blockId=asr_action block="Got Action Command? %cmd %compare"
+  //% blockId=asr_action block="Got Action Command? %compare"
   //% group="Basic" weight=85
   export function asr_action(compare: actionCMD): boolean{
     let cmd = get_cmd()
@@ -224,7 +224,7 @@ let cmd=''
     }
   }
 
-  //% blockId=asr_ask block="Got Ask Command? %cmd %compare"
+  //% blockId=asr_ask block="Got Ask Command? %compare"
   //% group="Basic" weight=80
   export function asr_ask(compare: askCMD): boolean{
     let cmd = get_cmd()
@@ -238,7 +238,7 @@ let cmd=''
     }
   }
 
-  //% blockId=asr_cust block="Got Custom Command? %cmd %compare"
+  //% blockId=asr_cust block="Got Custom Command? %compare"
   //% group="Basic" weight=75
   export function asr_cust(compare: custCMD): boolean{
     let cmd = get_cmd()

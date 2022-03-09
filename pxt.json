@@ -4,13 +4,13 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*",
-        "sugar": "github:kittenbot/pxt-sugar#v0.1.8"
+        "microphone": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "_locales/zh-TW/KittenASR-strings.json"
     ],
     "testFiles": [
         "test.ts"

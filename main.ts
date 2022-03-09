@@ -183,10 +183,10 @@ let cmd=''
     //}
   }
 
-  //% blockId=asr_awake block="Got Awake Command? %cmd"
+  //% blockId=asr_awake block="Got Awake Command?"
   //% group="Basic" weight=92
-  export function asr_awake(cmd: string): boolean{
-    //let temp = get_cmd()
+  export function asr_awake(): boolean{
+    let temp = get_cmd()
     //basic.showString(cmd)
 
     if (cmd == '100'){
@@ -212,8 +212,8 @@ let cmd=''
 
   //% blockId=asr_action block="Got Action Command? %cmd %compare"
   //% group="Basic" weight=85
-  export function asr_action(cmd: string, compare: actionCMD): boolean{
-    //let cmd = get_cmd()
+  export function asr_action(compare: actionCMD): boolean{
+    let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
     //let temp = get_cmd()
@@ -226,8 +226,8 @@ let cmd=''
 
   //% blockId=asr_ask block="Got Ask Command? %cmd %compare"
   //% group="Basic" weight=80
-  export function asr_ask(cmd: string, compare: askCMD): boolean{
-    //let cmd = get_cmd()
+  export function asr_ask(compare: askCMD): boolean{
+    let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
     //let temp = get_cmd()
@@ -240,8 +240,8 @@ let cmd=''
 
   //% blockId=asr_cust block="Got Custom Command? %cmd %compare"
   //% group="Basic" weight=75
-  export function asr_cust(cmd: string, compare: custCMD): boolean{
-    //let cmd = get_cmd()
+  export function asr_cust(compare: custCMD): boolean{
+    let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
     //let temp = get_cmd()

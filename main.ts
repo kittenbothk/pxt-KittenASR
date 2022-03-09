@@ -199,11 +199,11 @@ let cmd=''
   //% blockId=asr_light block="Got Light Command? %cmd %compare"
   //% group="Basic" weight=90
   export function asr_light(cmd: string, compare: lightCMD): boolean{
-    let cmd = get_cmd()
+    let temp = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
     //let temp = get_cmd()
-    if (cmd == compare){
+    if (temp == compare){
     return true
     } else{
     return false

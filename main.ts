@@ -1,5 +1,5 @@
 //% color="#32a852" weight=10 icon="\uf5f0"
-namespace Kitten ASR {
+namespace KittenASR {
 let cmd=''
 
   export enum lightCMD {

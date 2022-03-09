@@ -1,6 +1,6 @@
 //% color="#5c7cfa" weight=10 icon="\u03f0"
 namespace asr {
-var cmd=''
+let cmd=''
 
   export enum lightCMD {
   //% block="Light On"

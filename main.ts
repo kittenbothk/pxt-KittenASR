@@ -189,7 +189,7 @@ let cmd=''
   export function asr_awake(cmd: string): boolean{
     let temp = get_cmd()
     //basic.showString(cmd)
-    
+
     if (temp == '100'){
     return true
     } else{
@@ -254,8 +254,13 @@ let cmd=''
   })
 
   function get_cmd(): string {
-    cmd=serial.readString()
-    cmd=cmd.substr(3,3)
+    let now=serial.readString()
+    now=now.substr(3,3)
+    if (now.length>1){
+    cmd=now
+    return now
+    } else {
     return cmd
+    }
   }
 }

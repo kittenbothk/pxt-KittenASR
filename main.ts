@@ -1,4 +1,4 @@
-//% color="#32a852" weight=10 icon="\uf8f1"
+//% color="#32a852" weight=10 icon="\uf130"
 namespace KittenASR {
 let cmd=''
 

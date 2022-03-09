@@ -173,14 +173,14 @@ let cmd=''
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=95
   export function asr_cmd(): string {
-    let now=serial.readString()
-    now=now.substr(3,3)
-    if (now.length>1){
-    cmd=now
-    return now
-    } else {
+    let cmd=serial.readString()
+    cmd=cmd.substr(3,3)
+    //if (now.length>1){
+    //cmd=now
+    //return now
+    //} else {
     return cmd
-    }
+    //}
 
   }
 
@@ -203,7 +203,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    if (cmd == compare){
+    let temp = get_cmd()
+    if (temp == compare){
     return true
     } else{
     return false
@@ -216,7 +217,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    if (cmd == compare){
+    let temp = get_cmd()
+    if (temp == compare){
     return true
     } else{
     return false
@@ -229,7 +231,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    if (cmd == compare){
+    let temp = get_cmd()
+    if (temp == compare){
     return true
     } else{
     return false
@@ -242,7 +245,8 @@ let cmd=''
     //let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
-    if (cmd == compare){
+    let temp = get_cmd()
+    if (temp == compare){
     return true
     } else{
     return false
@@ -254,13 +258,8 @@ let cmd=''
   })
 
   function get_cmd(): string {
-    let now=serial.readString()
-    now=now.substr(3,3)
-    if (now.length>1){
-    cmd=now
-    return now
-    } else {
+    cmd=serial.readString()
+    cmd=cmd.substr(3,3)
     return cmd
-    }
   }
 }

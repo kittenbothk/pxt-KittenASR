@@ -187,10 +187,10 @@ let cmd=''
   //% blockId=asr_awake block="Got Awake Command? %cmd"
   //% group="Basic" weight=92
   export function asr_awake(cmd: string): boolean{
-    //let cmd = get_cmd()
+    let temp = get_cmd()
     //basic.showString(cmd)
-    //return cmd == compare
-    if (cmd == '100'){
+    
+    if (temp == '100'){
     return true
     } else{
     return false

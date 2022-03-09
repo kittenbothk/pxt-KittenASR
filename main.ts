@@ -168,15 +168,20 @@ let cmd=''
   export function asr_init(tx: SerialPin, rx: SerialPin): void {
     serial.redirect(tx, rx, BaudRate.BaudRate115200)
     basic.pause(100)
-    basic.pause(300)
   }
 
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=95
   export function asr_cmd(): string {
-    cmd=serial.readString()
-    cmd=cmd.substr(3,3)
+    let now=serial.readString()
+    now=now.substr(3,3)
+    if (now.length>1){
+    cmd=now
+    return now
+    } else {
     return cmd
+    }
+
   }
 
   //% blockId=asr_awake block="Got Awake Command? %cmd"

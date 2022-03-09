@@ -172,7 +172,7 @@ let cmd=''
 
   //% blockId=asr_cmd block="ASR Command"
   //% group="Basic" weight=95
-  export function asr_cmd(): void {
+  export function asr_cmd(){
     let cmd=serial.readString()
     cmd=cmd.substr(3,3)
     //if (now.length>1){
@@ -181,7 +181,6 @@ let cmd=''
     //} else {
     //return cmd
     //}
-
   }
 
   //% blockId=asr_awake block="Got Awake Command? %cmd"

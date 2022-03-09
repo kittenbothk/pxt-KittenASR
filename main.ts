@@ -196,9 +196,9 @@ let cmd=''
     }
   }
 
-  //% blockId=asr_light block="Got Light Command? %cmd %compare"
+  //% blockId=asr_light block="Got Light Command? %compare"
   //% group="Basic" weight=90
-  export function asr_light(cmd: string, compare: lightCMD): boolean{
+  export function asr_light(compare: lightCMD): boolean{
     let temp = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare

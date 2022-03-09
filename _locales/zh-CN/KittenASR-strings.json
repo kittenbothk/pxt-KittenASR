@@ -1,10 +1,10 @@
 {
-"KittenASR.asr_init|block": "初始化語音模組|Tx(綠色) %tx|Rx(藍色) %rx",
-"KittenASR.asr_cmd|block": "語音模組聽取命令詞",
-"KittenASR.asr_awake|block": "聽到喚醒詞? %compare",
-"KittenASR.asr_light|block": "聽到燈控類命令? %compare",
-"KittenASR.asr_action|block": "聽到行動類命令? %compare",
-"KittenASR.asr_ask|block": "聽到查詢類命令? %compare",
-"KittenASR.asr_cust|block": "聽到自訂命令? %compare",
-"{id:category}KittenASR": "語音模組"
+"KittenASR.asr_init|block": "初始化语音模组|Tx(绿色) %tx|Rx(蓝色) %rx",
+"KittenASR.asr_cmd|block": "语音模组听取命令词",
+"KittenASR.asr_awake|block": "听到唤醒词? %compare",
+"KittenASR.asr_light|block": "听到灯控类命令? %compare",
+"KittenASR.asr_action|block": "听到行动类命令? %compare",
+"KittenASR.asr_ask|block": "听到查询类命令? %compare",
+"KittenASR.asr_cust|block": "听到自订命令? %compare",
+"{id:category}KittenASR": "语音模组"
 }

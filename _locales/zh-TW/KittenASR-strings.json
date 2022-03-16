@@ -1,5 +1,5 @@
 {
-"KittenASR.asr_init|block": "初始化語音模組|Tx(綠色) %tx|Rx(藍色) %rx",
+"KittenASR.asr_init|block": "初始化語音模組|Tx(藍色) %tx|Rx(綠色) %rx",
 "KittenASR.asr_cmd|block": "語音模組聽取命令詞",
 "KittenASR.asr_awake|block": "聽到喚醒詞? %compare",
 "KittenASR.asr_light|block": "聽到燈控類命令? %compare",

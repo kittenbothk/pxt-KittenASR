@@ -163,7 +163,7 @@ let cmd=''
    * @param tx Tx pin; eg: SerialPin.P1
    * @param rx Rx pin; eg: SerialPin.P2
    */
-  //% blockId=asr_init block="ASR init|Tx pin %tx|Rx pin %rx"
+  //% blockId=asr_init block="ASR init|Tx(Blue) pin %tx|Rx(Green) pin %rx"
   //% group="Basic" weight=100
   export function asr_init(tx: SerialPin, rx: SerialPin): void {
     serial.redirect(tx, rx, BaudRate.BaudRate115200)

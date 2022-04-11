@@ -160,61 +160,61 @@ let cmd=''
 
   export enum ttsCMD {
   //%block="Temperature is"
-  tempis=0x01,
+  tempis=1,
   //%block="Humidity is"
-  humiis=0x02,
+  humiis=2,
   //%block="Welcome"
-  welcome=0x05,
+  welcome=5,
   //%block="Distance is"
-  distis=0x06,
+  distis=6,
   //%block="Millimeter"
-  mm=0x07,
+  mm=7,
   //%block="Centimeter"
-  cm=0x08,
+  cm=8,
   //%block="Meter"
-  m=0x09,
+  m=9,
   //%block="Weight is"
-  weightis=0x0b,
+  weightis=11,
   //%block="Gram"
-  gram=0x0c,
+  gram=12,
   //%block="Kilogram"
-  kilogram=0x0d,
+  kilogram=13,
   //%block="Please say the password"
-  password=0x0e,
+  password=14,
   //%block="Weather is"
-  weatheris=0x0f,
+  weatheris=15,
   //%block="Sunny"
-  sunny=0x10,
+  sunny=16,
   //%block="Cloudy"
-  cloudy=0x11,
+  cloudy=17,
   //%block="Raining"
-  raining=0x12,
+  raining=18,
   //%block="Snowing"
-  snowing=0x13,
+  snowing=19,
   //%block="Haze"
-  haze=0x14,
+  haze=20,
   //%block="Big"
-  big=0x15,
+  big=21,
   //%block="Middle"
-  middle=0x16,
+  middle=22,
   //%block="Small"
-  small=0x17,
+  small=23,
   //%block="Which floor"
-  floor=0x18,
+  floor=24,
   //%block="Yes"
-  yes=0x19,
+  yes=25,
   //%block="No"
-  no=0x1a,
+  no=26,
   //%block="Percent"
-  percent=0x1b,
+  percent=27,
   //%block="You are right"
-  right=0x1c,
+  right=28,
   //%block="You are wrong"
-  wrong=0x1d,
+  wrong=29,
   //%block="Degrees"
-  degrees=0x1e,
+  degrees=30,
   //%block="ok"
-  ok=0x21
+  ok=33
   }
 
 /**
@@ -319,15 +319,15 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_tts_try block="TTS TRY %tts"
+  //% blockId=asr_tts_try block="TTS Say %tts"
   //% group="Basic" weight=70
-  export function tts_try(tts:ttsCMD): void{
+  export function tts_say(tts:ttsCMD): void{
     let buf = pins.createBuffer(5);
-    buf[0] = 0xaa;
-    buf[1] = 0x55;
+    buf[0] = 170;
+    buf[1] = 85;
     buf[2] = tts
-    buf[3] = 0x55;
-    buf[4] = 0xaa;
+    buf[3] = 85;
+    buf[4] = 170;
     serial.writeBuffer(buf)
   }
 }

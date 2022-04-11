@@ -131,7 +131,7 @@ let cmd=''
   mtemp='406',
   //%block='Measure Weight'
   weight='407',
-  //block='Measure Height'
+  //%block='Measure Height'
   height='408'
   }
 
@@ -258,5 +258,17 @@ let cmd=''
 
   function get_cmd(): string {
     return cmd
+  }
+
+  //% blockId=asr_tts_try block="TTS TRY"
+  //% group="Basic" weight=70
+  export function tts_try(): void{
+    let buf = pins.createBuffer(5);
+    buf[0] = 0xaa;
+    buf[1] = 0x55;
+    buf[2] = 0x01;
+    buf[3] = 0x55;
+    buf[4] = 0xaa;
+    serial.writeBuffer(buf)
   }
 }

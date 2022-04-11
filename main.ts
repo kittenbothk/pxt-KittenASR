@@ -158,6 +158,65 @@ let cmd=''
   c10='910'
   }
 
+  export enum ttsCMD {
+  //%block="Temperature is"
+  tempis=0x01,
+  //%block="Humidity is"
+  humiis=0x02,
+  //%block="Welcome"
+  welcome=0x05,
+  //%block="Distance is"
+  distis=0x06,
+  //%block="Millimeter"
+  mm=0x07,
+  //%block="Centimeter"
+  cm=0x08,
+  //%block="Meter"
+  m=0x09,
+  //%block="Weight is"
+  weightis=0x0b,
+  //%block="Gram"
+  gram=0x0c,
+  //%block="Kilogram"
+  kilogram=0x0d,
+  //%block="Please say the password"
+  password=0x0e,
+  //%block="Weather is"
+  weatheris=0x0f,
+  //%block="Sunny"
+  sunny=0x10,
+  //%block="Cloudy"
+  cloudy=0x11,
+  //%block="Raining"
+  raining=0x12,
+  //%block="Snowing"
+  snowing=0x13,
+  //%block="Haze"
+  haze=0x14,
+  //%block="Big"
+  big=0x15,
+  //%block="Middle"
+  middle=0x16,
+  //%block="Small"
+  small=0x17,
+  //%block="Which floor"
+  floor=0x18,
+  //%block="Yes"
+  yes=0x19,
+  //%block="No"
+  no=0x1a,
+  //%block="Percent"
+  percent=0x1b,
+  //%block="You are right"
+  right=0x1c,
+  //%block="You are wrong"
+  wrong=0x1d,
+  //%block="Degrees"
+  degrees=0x1e,
+  //%block="ok"
+  ok=0x21
+  }
+
 /**
    * init serial port
    * @param tx Tx pin; eg: SerialPin.P1
@@ -260,13 +319,13 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_tts_try block="TTS TRY"
+  //% blockId=asr_tts_try block="TTS TRY %tts"
   //% group="Basic" weight=70
-  export function tts_try(): void{
+  export function tts_try(tts:ttsCMD): void{
     let buf = pins.createBuffer(5);
     buf[0] = 0xaa;
     buf[1] = 0x55;
-    buf[2] = 0x01;
+    buf[2] = tts
     buf[3] = 0x55;
     buf[4] = 0xaa;
     serial.writeBuffer(buf)

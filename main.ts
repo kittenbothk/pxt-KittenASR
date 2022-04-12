@@ -362,6 +362,7 @@ let cmd=''
     buf[8] = 170
     let temp=int
     let index=3
+    /*
     if (temp%256 != 0){
         while (temp%256 != 0){
         let remainder=temp%256
@@ -370,6 +371,22 @@ let cmd=''
         index+=1
         }
         buf[index]=temp/256
+    }
+    */
+    if (temp%256 != 0){
+        while (temp!=0){
+            let remainder=temp%256
+            if (remainder!=0){
+            buf[index]=remainder
+            temp-=remainder
+            index+=1
+            }
+            else {
+            temp=temp/256
+            index+=1
+            }
+        }
+        buf[index]=temp
     }
 
     serial.writeBuffer(buf)

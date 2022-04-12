@@ -367,7 +367,7 @@ let cmd=''
         let remainder=temp%256
         buf[index]=remainder
         temp-=remainder
-        index+1
+        index+=1
         }
         buf[index]=temp/256
     }

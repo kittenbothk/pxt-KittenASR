@@ -386,6 +386,13 @@ let cmd=''
             }
         }
         buf[index]=temp
+    } else {
+        //
+        while (temp/256!=0){
+        temp=temp/256
+        index+=1
+        }
+        buf[index]=temp
     }
 
     serial.writeBuffer(buf)

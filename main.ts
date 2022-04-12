@@ -319,7 +319,7 @@ let cmd=''
     return cmd
   }
 
-  //% blockId=asr_tts_try block="TTS Say %tts"
+  //% blockId=asr_tts_say block="TTS Say %tts"
   //% group="Basic" weight=70
   export function tts_say(tts:ttsCMD): void{
     let buf = pins.createBuffer(5);
@@ -328,6 +328,22 @@ let cmd=''
     buf[2] = tts
     buf[3] = 85;
     buf[4] = 170;
+    serial.writeBuffer(buf)
+  }
+
+  //% blockId=asr_tts_time block="TTS Say Time |hour %hour |minutes %min"
+  //% hour.min=0 hour.max=24
+  //% min.min=0 min.max=60
+  //% group="Basic" weight=65
+  export function tts_time(hour, min): void{
+  let buf = pins.createBuffer(7);
+    buf[0] = 170
+    buf[1] = 85
+    buf[2] = 3
+    buf[3] = hour
+    buf[4] = min
+    buf[5]= 85
+    buf[6]= 170
     serial.writeBuffer(buf)
   }
 }

@@ -335,7 +335,7 @@ let cmd=''
   //% hour.min=0 hour.max=24
   //% min.min=0 min.max=60
   //% group="Basic" weight=65
-  export function tts_time(hour, min): void{
+  export function tts_time(hour: number, min: number): void{
   let buf = pins.createBuffer(7);
     buf[0] = 170
     buf[1] = 85

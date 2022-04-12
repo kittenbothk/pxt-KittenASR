@@ -6,5 +6,8 @@
 "KittenASR.asr_action|block": "聽到行動類命令? %compare",
 "KittenASR.asr_ask|block": "聽到查詢類命令? %compare",
 "KittenASR.asr_cust|block": "聽到自訂命令? %compare",
+"KittenASR.asr_tts_say|block": "語音播報 %tts",
+"KittenASR.asr_tts_time|block": "語音報時 |時 %hour |分 %min",
+"KittenASR.asr_tts_int|block": "語音報整數 %int",
 "{id:category}KittenASR": "語音模組"
 }

@@ -331,7 +331,7 @@ let cmd=''
     serial.writeBuffer(buf)
   }
 
-  //% blockId=asr_tts_time block="TTS Say Time |hour %hour |minutes %min"
+  //% blockId=asr_tts_time block="TTS Say Time |Hour %hour |Minutes %min"
   //% hour.min=0 hour.max=24
   //% min.min=0 min.max=60
   //% group="Basic" weight=65
@@ -362,17 +362,7 @@ let cmd=''
     buf[8] = 170
     let temp=int
     let index=3
-    /*
-    if (temp%256 != 0){
-        while (temp%256 != 0){
-        let remainder=temp%256
-        buf[index]=remainder
-        temp-=remainder
-        index+=1
-        }
-        buf[index]=temp/256
-    }
-    */
+
     if (temp%256 != 0){
         while (temp!=0){
             let remainder=temp%256

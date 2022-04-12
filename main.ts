@@ -346,4 +346,32 @@ let cmd=''
     buf[6]= 170
     serial.writeBuffer(buf)
   }
+
+  //% blockId=asr_tts_int block="TTS Say Integer %int"
+  //% group="Basic" weight=60
+  export function tts_int(int: number): void{
+  let buf = pins.createBuffer(9);
+    buf[0] = 170
+    buf[1] = 85
+    buf[2] = 32
+    buf[3] = 0
+    buf[4] = 0
+    buf[5] = 0
+    buf[6] = 0
+    buf[7] = 85
+    buf[8] = 170
+    let temp=number
+    let index=3
+    if (temp%256 != 0){
+        while (temp%256 != 0){
+        let remainder=temp%256
+        buf[index]=remainder
+        temp-=remainder
+        index+1
+        }
+        buf[index]=temp/256
+    }
+
+    serial.writeBuffer(buf)
+  }
 }

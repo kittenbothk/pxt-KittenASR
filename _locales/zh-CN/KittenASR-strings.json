@@ -7,7 +7,7 @@
 "KittenASR.asr_ask|block": "听到查询类命令? %compare",
 "KittenASR.asr_cust|block": "听到自订命令? %compare",
 "KittenASR.asr_tts_say|block": "语音播报 %tts",
-"KittenASR.asr_tts_time|block": "语音报时 |时 %hour |分 %min",
+"KittenASR.asr_tts_time|block": "语音报时 |%hour 时 |%min 分",
 "KittenASR.asr_tts_int|block": "语音报整数 %int",
 "{id:category}KittenASR": "语音模组"
 }

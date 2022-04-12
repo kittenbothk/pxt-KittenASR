@@ -299,7 +299,7 @@ let cmd=''
 
   //% blockId=asr_cust block="Got Custom Command? %compare"
   //% group="Basic" weight=75
-  export function asr_cust(compare: custCMD): boolean{
+  function asr_cust(compare: custCMD): boolean{
     let cmd = get_cmd()
     //basic.showString(cmd)
     //return cmd == compare
@@ -321,7 +321,7 @@ let cmd=''
 
   //% blockId=asr_tts_say block="TTS Say %tts"
   //% group="Basic" weight=70
-  export function tts_say(tts:ttsCMD): void{
+  export function asr_tts_say(tts:ttsCMD): void{
     let buf = pins.createBuffer(5);
     buf[0] = 170;
     buf[1] = 85;
@@ -335,7 +335,7 @@ let cmd=''
   //% hour.min=0 hour.max=24
   //% min.min=0 min.max=60
   //% group="Basic" weight=65
-  export function tts_time(hour: number, min: number): void{
+  export function asr_tts_time(hour: number, min: number): void{
   let buf = pins.createBuffer(7);
     buf[0] = 170
     buf[1] = 85
@@ -349,7 +349,7 @@ let cmd=''
 
   //% blockId=asr_tts_int block="TTS Say Integer %int"
   //% group="Basic" weight=60
-  export function tts_int(int: number): void{
+  export function asr_tts_int(int: number): void{
   let buf = pins.createBuffer(9);
     buf[0] = 170
     buf[1] = 85

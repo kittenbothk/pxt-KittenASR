@@ -348,9 +348,14 @@ let cmd=''
   }
 
   //% blockId=asr_tts_int block="TTS Say Integer %int"
-  //% int.min=0 int.max=4294967295
   //% group="Basic" weight=60
   export function asr_tts_int(int: number): void{
+  if (int<0){
+  int=0
+  }
+  if (int>16711680){
+  int=16711680
+  }
   let buf = pins.createBuffer(9);
     buf[0] = 170
     buf[1] = 85

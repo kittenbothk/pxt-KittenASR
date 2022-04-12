@@ -331,7 +331,7 @@ let cmd=''
     serial.writeBuffer(buf)
   }
 
-  //% blockId=asr_tts_time block="TTS Say Time |%hour Hour | %min Minutes"
+  //% blockId=asr_tts_time block="TTS Say Time |%hour Minutes | %min Minutes"
   //% hour.min=0 hour.max=24
   //% min.min=0 min.max=60
   //% group="Basic" weight=65

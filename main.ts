@@ -387,8 +387,7 @@ let cmd=''
         }
         buf[index]=temp
     } else {
-        //
-        while (temp/256!=0){
+        while (temp/256!=1){
         temp=temp/256
         index+=1
         }

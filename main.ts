@@ -383,7 +383,6 @@ let cmd=''
             }
             else {
             temp=temp/256
-            index+=1
             }
         }
         buf[index]=temp

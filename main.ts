@@ -394,8 +394,8 @@ let cmd=''
   }
 
   //% shim=test::convert
-  export function convert(p: number): number {
-        return 0
+  export function convert(p: number): string {
+        return "0"
   }
 
   //% blockId=testing block="testing %p"
@@ -403,13 +403,6 @@ let cmd=''
   export function testing(p: number): number {
     let final=convert(p)
     return final
-  }
-
-  //% shim=pythontest::pytest
-  //% blockId=testingpython block="testing python"
-  //% group="Basic" weight=70
-  export function testingpython() {
-    return 0
   }
 
 }

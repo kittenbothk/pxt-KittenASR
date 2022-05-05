@@ -2,6 +2,22 @@
 
 namespace test {
 // %
+string convert(double d){
+   union{
+	double myDouble;
+	unsigned char myChars[sizeof(double)];
+	} test;
+
+	test.myDouble = d;
+	string current="";
+	for( int k = 0; k < sizeof(double); k++ ){
+            //std::cout << (int)test.myChars[k] << ' ';
+            current = current.append(to_string((int)test.myChars[k]));
+            current = current.append(" ");
+	}
+	return current;
+}
+
 /*
 int convert(double num){
 union{

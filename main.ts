@@ -393,7 +393,7 @@ let cmd=''
     serial.writeBuffer(buf)
   }
 
-  //% shim=test:convert
+  //% shim=test::convert
     export function convert(p: number): number {
         return 0
     }

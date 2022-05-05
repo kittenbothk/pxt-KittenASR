@@ -2,10 +2,11 @@
 
 namespace test {
 
-void convert(void){
+char convert(double num){
 union {
-  double d[2];
+  double d[num];
   char b[sizeof(double) * 2];
 };
+return b;
 }
 }

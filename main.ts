@@ -392,4 +392,12 @@ let cmd=''
 
     serial.writeBuffer(buf)
   }
+
+  //% blockId=test block="test"
+  //% group="Basic" weight=60
+  export function test(n:number): void{
+    let myNumber: number = n;
+    myNumber.toString(16); // returns '7b'
+    basic.showString(myNumber)
+  }
 }

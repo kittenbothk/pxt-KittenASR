@@ -392,7 +392,4 @@ let cmd=''
 
     serial.writeBuffer(buf)
   }
-
-
-  }
 }

@@ -1,5 +1,3 @@
-#include "pxt.h"
-
 namespace test {
 
 char convert(double d){

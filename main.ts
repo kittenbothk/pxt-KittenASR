@@ -404,4 +404,12 @@ let cmd=''
     let final=convert(p)
     return final
   }
+
+  //% shim=pythontest::pytest
+  //% blockId=testingpython block="testing python"
+  //% group="Basic" weight=70
+  export function testingpython() {
+    return 0
+  }
+
 }

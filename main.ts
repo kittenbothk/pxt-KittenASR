@@ -398,7 +398,7 @@ let cmd=''
         return 0
     }
 
-  //% blockId=testing block="testing"
+  //% blockId=testing block="testing %n"
   //% group="Basic" weight=70
   export function testing(n:number): number{
     let final=convert(n)

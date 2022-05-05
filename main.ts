@@ -394,6 +394,8 @@ let cmd=''
   }
 
   //% shim=test::convert
+  //% blockId=convert block="test %p
+  //% group="Basic" weight=60
   export function convert(p: number): string {
         return "0"
   }

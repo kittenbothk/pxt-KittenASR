@@ -397,12 +397,4 @@ let cmd=''
   export function convert(p: number): string {
         return "0"
   }
-
-  //% blockId=testing block="testing %p"
-  //% group="Basic" weight=70
-  export function testing(p: number): number {
-    let final=convert(p)
-    return final
-  }
-
 }

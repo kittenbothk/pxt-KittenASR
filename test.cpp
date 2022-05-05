@@ -1,7 +1,5 @@
 namespace test {
 
-char convert(double d){
-    //char *byteArray = (char*)&d;
-    return 'a';
+void convert(void){
 }
 }

@@ -2,6 +2,7 @@
 
 namespace test {
 // %
+/*
 int convert(double num){
 union{
 	double myDouble;
@@ -15,4 +16,25 @@ union{
 	}
 	return (int)test.myChars;
 }
+*/
+/*
+int* convert(double num){
+union{
+	double myDouble;
+	unsigned char myChars[sizeof(double)];
+	} test;
+	test.myDouble = num;
+	int results[sizeof(double)];
+	for( int k = 0; k < sizeof(double); k++ ){
+	    results[k]=(int)test.myChars[k];
+	}
+	int *ptr=results;
+	return ptr;
+}
+
+int getArray(double input){
+    int* ans=convert(input);
+    return ans;
+}
+*/
 }

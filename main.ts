@@ -394,14 +394,14 @@ let cmd=''
   }
 
   //% shim=test::convert
-    export function convert(p: number): number {
+  export function convert(p: number): number {
         return 0
-    }
+  }
 
-  //% blockId=testing block="testing %n"
+  //% blockId=testing block="testing %p"
   //% group="Basic" weight=70
-  export function testing(n:number): number{
-    let final=convert(n)
+  export function testing(p: number): number {
+    let final=convert(p)
     return final
   }
 }

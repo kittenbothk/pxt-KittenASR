@@ -1,7 +1,7 @@
 namespace test {
 
 char convert(double d){
-    char *byteArray = (char*)&d;
-    return byteArray;
+    //char *byteArray = (char*)&d;
+    return 'a';
 }
 }

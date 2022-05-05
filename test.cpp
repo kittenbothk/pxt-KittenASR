@@ -2,7 +2,7 @@
 
 namespace test {
 
-void convert(double num){
+char convert(double num){
 union{
 	double myDouble;
 	unsigned char myChars[sizeof(double)];
@@ -13,5 +13,6 @@ union{
 	    //std::cout << (int)test.myChars[k] << ' ';
         continue;
 	}
+	return test.myChars;
 }
 }

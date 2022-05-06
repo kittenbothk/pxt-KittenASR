@@ -4,10 +4,10 @@ using namespace std;
 
 namespace test {
 // %
+/*
+string convert(){
 
-std::string convert(){
-
-std::string current="";
+string current="";
 
    union{
 	double myDouble;
@@ -24,5 +24,8 @@ std::string current="";
 
 	return current;
 }
-
+*/
+int convert(){
+return 69;
+}
 }

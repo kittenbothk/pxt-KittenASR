@@ -1,7 +1,7 @@
 namespace test {
 // %
 
-string convert(double d){
+string convert(){
 string current="";
 /*
    union{

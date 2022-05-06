@@ -394,9 +394,13 @@ let cmd=''
   }
 
   //% shim=test::convert
-  //% blockId=convert block="test"
-  //% group="Basic" weight=60
   export function convert(): number {
         return 0
+  }
+
+  //% blockId=test block="test"
+  //% group="Basic" weight=60
+  export function test(): number {
+        convert()
   }
 }

@@ -1,7 +1,7 @@
 namespace test {
 // %
 
-string convert(){
+//string convert(){
 
 //string current="";
 /*
@@ -19,6 +19,6 @@ string convert(){
 	}
 	*/
 	//return current;
-}
+//}
 
 }

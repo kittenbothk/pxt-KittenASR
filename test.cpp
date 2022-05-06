@@ -9,14 +9,14 @@ string current="";
 
    union{
 	double myDouble;
-	unsigned char myChars[sizeof(double)];
+	unsigned char myChars[8];
 	} test;
 
 	test.myDouble = d;
 
-	for( int k = 0; k < sizeof(double); k++ ){
+	for( int k = 0; k < 8; k++ ){
             //std::cout << (int)test.myChars[k] << ' ';
-            current = current.append(to_string((int)test.myChars[k]));
+            current = current.append(to_string(test.myChars[k]));
             current = current.append(" ");
 	}
 

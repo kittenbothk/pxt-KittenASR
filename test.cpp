@@ -1,6 +1,8 @@
 namespace test {
 // %
-
+int main(){
+return 1
+}
 //string convert(){
 
 //string current="";

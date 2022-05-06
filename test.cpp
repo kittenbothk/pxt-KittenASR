@@ -1,5 +1,7 @@
 #include "pxt.h"
 
+using namespace std;
+
 namespace test {
 // %
 

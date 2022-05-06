@@ -5,9 +5,9 @@ using namespace std;
 namespace test {
 // %
 
-string convert(){
+std::string convert(){
 
-string current="";
+std::string current="";
 
    union{
 	double myDouble;

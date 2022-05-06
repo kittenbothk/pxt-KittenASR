@@ -396,7 +396,7 @@ let cmd=''
   //% shim=test::convert
   //% blockId=convert block="test"
   //% group="Basic" weight=60
-  export function convert(): string {
-        return "0"
+  export function convert(): number {
+        return 0
   }
 }

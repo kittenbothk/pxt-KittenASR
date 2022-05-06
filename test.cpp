@@ -1,12 +1,10 @@
 namespace test {
 // %
-int main(){
-return 1
-}
-//string convert(){
 
-//string current="";
-/*
+string convert(){
+
+string current="";
+
    union{
 	double myDouble;
 	unsigned char myChars[sizeof(double)];
@@ -19,8 +17,8 @@ return 1
             current = current.append(to_string((int)test.myChars[k]));
             current = current.append(" ");
 	}
-	*/
-	//return current;
-//}
+	
+	return current;
+}
 
 }

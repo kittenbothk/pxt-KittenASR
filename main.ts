@@ -393,8 +393,8 @@ let cmd=''
     serial.writeBuffer(buf)
   }
 
-  //% shim=test::convert
-  //% blockId=testing block="test"
+  //% shim=test::testing
+  //% blockId=testing block="testing"
   //% group="Basic" weight=60
   export function testing(): number {
         return 0

@@ -18,11 +18,12 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.18",
+        "target": "4.0.11",
         "targetId": "microbit"
     },
     "supportedTargets": [
         "microbit"
     ],
+    "public":true,
     "preferredEditor": "blocksprj"
 }

@@ -2,7 +2,8 @@ namespace test {
 // %
 
 string convert(){
-string current="";
+
+//string current="";
 /*
    union{
 	double myDouble;
@@ -17,7 +18,7 @@ string current="";
             current = current.append(" ");
 	}
 	*/
-	return current;
+	//return current;
 }
 
 }

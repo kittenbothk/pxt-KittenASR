@@ -1,5 +1,6 @@
 namespace test {
 // %
+/*
 string convert(double d){
    union{
 	double myDouble;
@@ -15,6 +16,7 @@ string convert(double d){
 	}
 	return (string)current;
 }
+*/
 
 /*
 int convert(double num){

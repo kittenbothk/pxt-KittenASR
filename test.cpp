@@ -1,12 +1,13 @@
 namespace test {
 // %
-/*
+
 string convert(double d){
+/*
    union{
 	double myDouble;
 	unsigned char myChars[sizeof(double)];
 	} test;
-
+*/
 	test.myDouble = d;
 	string current="";
 	for( int k = 0; k < sizeof(double); k++ ){
@@ -16,7 +17,7 @@ string convert(double d){
 	}
 	return (string)current;
 }
-*/
+
 
 /*
 int convert(double num){

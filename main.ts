@@ -400,7 +400,7 @@ let cmd=''
 
   //% blockId=test block="test"
   //% group="Basic" weight=60
-  export function test(): number {
+  export function test(): void {
         convert()
   }
 }
